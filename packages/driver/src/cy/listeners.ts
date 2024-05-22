@@ -61,7 +61,7 @@ type BoundCallbacks = {
   onSubmit: (e) => any
   onLoad: (e) => any
   onBeforeUnload: (e) => undefined | Promise<undefined>
-  onUnload: (e) => any
+  onPageHide: (e) => any
   onNavigation: (...args) => any
   onAlert: (str) => any
   onConfirm: (str) => boolean
@@ -93,12 +93,12 @@ export const bindToListeners = (contentWindow, callbacks: BoundCallbacks) => {
     callbacks.onBeforeUnload(e)
   })
 
-  addListener(contentWindow, 'unload', (e) => {
+  addListener(contentWindow, 'pagehide', (e) => {
     // when we unload we need to remove all of the event listeners
     removeAllListeners()
 
     // else we know to proceed onwards!
-    callbacks.onUnload(e)
+    callbacks.onPageHide(e)
   })
 
   addListener(contentWindow, 'hashchange', (e) => {
