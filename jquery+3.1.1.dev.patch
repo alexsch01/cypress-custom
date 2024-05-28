@@ -1,0 +1,13 @@
+diff --git a/node_modules/jquery/dist/jquery.js b/node_modules/jquery/dist/jquery.js
+index 072e308..1a9af64 100644
+--- a/node_modules/jquery/dist/jquery.js
++++ b/node_modules/jquery/dist/jquery.js
+@@ -1132,7 +1132,7 @@ setDocument = Sizzle.setDocument = function( node ) {
+ 
+ 		// Support: IE 11, Edge
+ 		if ( subWindow.addEventListener ) {
+-			subWindow.addEventListener( "unload", unloadHandler, false );
++			subWindow.addEventListener( "pagehide", unloadHandler, false );
+ 
+ 		// Support: IE 9 - 10 only
+ 		} else if ( subWindow.attachEvent ) {
