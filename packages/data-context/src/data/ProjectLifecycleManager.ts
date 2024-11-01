@@ -316,13 +316,13 @@ export class ProjectLifecycleManager {
     const configBrowser = this.loadedFullConfig?.defaultBrowser
 
     if (configBrowser && !this.ctx.coreData.isBrowserGivenByCli) {
-      await this.setActiveBrowserByNameOrPath(configBrowser)
-
       if (this.ctx.isRunMode) {
         this.ctx.setModeOptionsBrowser(configBrowser)
 
         return
       }
+
+      await this.setActiveBrowserByNameOrPath(configBrowser)
 
       if (this.ctx.coreData.activeBrowser) {
         await this.ctx.actions.project.launchProject(this.ctx.coreData.currentTestingType)
