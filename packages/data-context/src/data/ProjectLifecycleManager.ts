@@ -322,13 +322,7 @@ export class ProjectLifecycleManager {
         return
       }
 
-      await this.setActiveBrowserByNameOrPath(configBrowser)
-
-      if (this.ctx.coreData.activeBrowser) {
-        await this.ctx.actions.project.launchProject(this.ctx.coreData.currentTestingType)
-      }
-
-      return
+      this.ctx.coreData.cliBrowser = configBrowser
     }
 
     if (this.ctx.coreData.cliBrowser) {
