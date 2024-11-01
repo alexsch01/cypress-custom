@@ -243,4 +243,15 @@ describe('e2e config', () => {
       snapshot: true,
     })
   })
+
+  it('launches browser using config.defaultBrowser', async function () {
+    await Fixtures.scaffoldProject('config-defaultBrowser')
+
+    return systemTests.exec(this, {
+      project: 'config-defaultBrowser',
+      onStdout: (stdout) => {
+        expect(stdout).to.include('Browser:    Chrome')
+      },
+    })
+  })
 })
