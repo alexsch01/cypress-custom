@@ -1,7 +1,6 @@
 export interface CommonModeOptions {
   _?: (string | null)[] | null
   invokedFromCli: boolean
-  isBrowserGivenByCli: boolean
   userNodePath?: string
   userNodeVersion?: string
   configFile?: string | null
@@ -25,6 +24,7 @@ export interface RunModeOptions extends CommonModeOptions {
   parallel?: boolean | null
   ciBuildId?: string | null
   tag?: (string)[] | null
+  isBrowserGivenByCli: boolean
 }
 
 export type TestingType = 'e2e' | 'component'
