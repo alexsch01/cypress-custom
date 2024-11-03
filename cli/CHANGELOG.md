@@ -10,7 +10,6 @@ _Released 11/5/2024 (PENDING)_
 **Dependency Updates:**
 
 - Updated `@cypress/request` from `3.0.4` to `3.0.6`. Addressed in [#30488](https://github.com/cypress-io/cypress/pull/30488).
-- Added ability to specify the default running browser in cypress config. Addresses [#6646](https://github.com/cypress-io/cypress/issues/6646).
 
 ## 13.15.1
 
