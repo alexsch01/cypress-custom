@@ -3218,7 +3218,7 @@ declare namespace Cypress {
     indexHtmlFile: string
 
     /**
-     * Set a default browser other than electron when user doesn't pass in "--browser".
+     * Set a default browser when user doesn't pass in "--browser".
      */
     defaultBrowser: string
   }
