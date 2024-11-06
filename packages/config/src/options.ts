@@ -173,6 +173,7 @@ const driverConfigOptions: Array<DriverConfigOption> = [
     name: 'defaultBrowser',
     defaultValue: null,
     validation: validate.isString,
+    requireRestartOnChange: 'browser',
   }, {
     name: 'defaultCommandTimeout',
     defaultValue: 4000,
