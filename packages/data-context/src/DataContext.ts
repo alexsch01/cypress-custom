@@ -426,7 +426,8 @@ export class DataContext {
     })
   }
 
-  setModeOptionsBrowser (browser: string) {
+  updateCliBrowser (browser: string) {
     (this._modeOptions as Partial<AllModeOptions>).browser = browser
+    this.ctx.coreData.cliBrowser
   }
 }
