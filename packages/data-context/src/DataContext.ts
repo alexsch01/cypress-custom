@@ -428,6 +428,6 @@ export class DataContext {
 
   updateCliBrowser (browser: string) {
     (this._modeOptions as Partial<AllModeOptions>).browser = browser
-    this.ctx.coreData.cliBrowser
+    this.coreData.cliBrowser = configBrowser
   }
 }
