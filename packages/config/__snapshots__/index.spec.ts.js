@@ -26,6 +26,7 @@ exports['config/src/index .getDefaultValues returns list of public config keys 1
     'specPattern': '**/*.cy.{js,jsx,ts,tsx}',
     'indexHtmlFile': 'cypress/support/component-index.html',
   },
+  'defaultBrowser': null,
   'defaultCommandTimeout': 4000,
   'downloadsFolder': 'cypress/downloads',
   'e2e': {
@@ -117,6 +118,7 @@ exports['config/src/index .getDefaultValues returns list of public config keys f
     'specPattern': '**/*.cy.{js,jsx,ts,tsx}',
     'indexHtmlFile': 'cypress/support/component-index.html',
   },
+  'defaultBrowser': null,
   'defaultCommandTimeout': 4000,
   'downloadsFolder': 'cypress/downloads',
   'e2e': {
