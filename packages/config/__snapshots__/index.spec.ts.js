@@ -208,6 +208,7 @@ exports['config/src/index .getPublicConfigKeys returns list of public config key
   'chromeWebSecurity',
   'clientCertificates',
   'component',
+  'defaultBrowser',
   'defaultCommandTimeout',
   'downloadsFolder',
   'e2e',
