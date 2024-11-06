@@ -173,7 +173,6 @@ const driverConfigOptions: Array<DriverConfigOption> = [
     name: 'defaultBrowser',
     defaultValue: null,
     validation: validate.isString,
-    overrideLevel: 'any',
   }, {
     name: 'defaultCommandTimeout',
     defaultValue: 4000,
