@@ -249,8 +249,14 @@ describe('e2e config', () => {
 
     return systemTests.exec(this, {
       project: 'config-defaultBrowser',
+
+      // For when Chrome is actually installed
+      browser: 'chrome',
+
+      command: 'cypress',
+      args: ['run', '--dev', '--project', path.resolve(process.cwd(), './projects/config-defaultBrowser')],
       onStdout: (stdout) => {
-        expect(stdout).to.include('Browser:    Chrome')
+        expect(stdout).to.include('Browser:        Chrome')
       },
     })
   })
