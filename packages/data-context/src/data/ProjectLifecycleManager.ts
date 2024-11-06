@@ -315,12 +315,11 @@ export class ProjectLifecycleManager {
   async setInitialActiveBrowser () {
     const configBrowser = this.loadedFullConfig?.defaultBrowser
 
-    if (configBrowser) {
-      if (this.ctx.isRunMode && !this.ctx.modeOptions.isBrowserGivenByCli) {
-        this.ctx.setModeOptionsBrowser(configBrowser)
-      }
-
-      this.ctx.coreData.cliBrowser ??= configBrowser
+    // if we have a defaultBrowser from the config and a CLI browser wasn't passed,
+    // update the cliBrowser to the defaultBrowser from the config
+    // since we want the defaultBrowser to behave as if it was passed via CLI
+    if (configBrowser && !this.ctx.modeOptions.isBrowserGivenByCli) {
+      this.ctx.updateCliBrowser(configBrowser)
     }
 
     if (this.ctx.coreData.cliBrowser) {
