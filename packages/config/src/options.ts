@@ -173,7 +173,6 @@ const driverConfigOptions: Array<DriverConfigOption> = [
     name: 'defaultBrowser',
     defaultValue: null,
     validation: validate.isString,
-    requireRestartOnChange: 'browser',
   }, {
     name: 'defaultCommandTimeout',
     defaultValue: 4000,
@@ -184,6 +183,7 @@ const driverConfigOptions: Array<DriverConfigOption> = [
     defaultValue: 'cypress/downloads',
     validation: validate.isString,
     isFolder: true,
+    requireRestartOnChange: 'browser',
   }, {
     name: 'e2e',
     // e2e runner overrides
