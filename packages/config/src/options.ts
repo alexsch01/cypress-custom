@@ -184,7 +184,6 @@ const driverConfigOptions: Array<DriverConfigOption> = [
     defaultValue: 'cypress/downloads',
     validation: validate.isString,
     isFolder: true,
-    requireRestartOnChange: 'browser',
   }, {
     name: 'e2e',
     // e2e runner overrides
